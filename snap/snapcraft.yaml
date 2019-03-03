@@ -28,10 +28,8 @@ parts:
       CROSS_COMPILE=$(pwd)/toolchain/bin/aarch64-linux-gnu- make
 
       mkdir -p $SNAPCRAFT_PART_INSTALL/boot-assets
-      cp u-boot.img $SNAPCRAFT_PART_INSTALL/boot-assets/
-
-      #tools/mkimage -n rk3288 -T rksd -d spl/u-boot-spl-dtb.bin $SNAPCRAFT_PART_INSTALL/boot-assets/u-boot.img
-      #cat u-boot-dtb.bin >> $SNAPCRAFT_PART_INSTALL/boot-assets/u-boot.img
+      tools/mkimage -n rk3399 -T rksd -d spl/u-boot-spl-dtb.bin $SNAPCRAFT_PART_INSTALL/boot-assets/u-boot.img
+      cat u-boot-dtb.bin >> $SNAPCRAFT_PART_INSTALL/boot-assets/u-boot.img
 
       tools/mkenvimage -r -s 131072 -o $SNAPCRAFT_PART_INSTALL/uboot.env ../../../uboot.env.in
       ln -s uboot.env $SNAPCRAFT_PART_INSTALL/uboot.conf
