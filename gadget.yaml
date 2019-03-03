@@ -7,7 +7,7 @@ volumes:
     structure:
       - name: u-boot
         type: bare
-        size: 524288
+        size: 819200
         offset: 32768
         content:
           - image: boot-assets/u-boot.img
