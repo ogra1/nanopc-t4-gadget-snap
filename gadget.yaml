@@ -1,7 +1,7 @@
 device-tree: rk3399-nanopi4-rev00.dtb
 device-tree-origin: kernel
 volumes:
-  nanopi4:
+  nanopc-t4:
     bootloader: u-boot
     schema: mbr
     structure:
