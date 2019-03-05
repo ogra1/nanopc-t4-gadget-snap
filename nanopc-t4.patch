@@ -849,3 +849,20 @@ index 0000000..662c46e
 +CONFIG_USB_ETHER_SMSC95XX=y
 +CONFIG_USE_TINY_PRINTF=y
 +CONFIG_ERRNO_STR=y
+diff --git a/include/configs/rk3399_common.h b/include/configs/rk3399_common.h
+index eeda070..6007adc 100644
+--- a/include/configs/rk3399_common.h
++++ b/include/configs/rk3399_common.h
+@@ -62,3 +62,12 @@
+ /* enable usb config for usb ether */
+ 
+ #endif
++
++#undef CONFIG_ENV_SIZE
++#define CONFIG_ENV_SIZE (128 * 1024)
++
++#define CONFIG_ENV_IS_IN_FAT
++#define CONFIG_ENV_FAT_INTERFACE "mmc"
++#define CONFIG_ENV_FAT_DEVICE_AND_PART "1"
++#define CONFIG_ENV_FAT_FILE "uboot.env"
++#define CONFIG_SYS_REDUNDAND_ENVIRONMENT
